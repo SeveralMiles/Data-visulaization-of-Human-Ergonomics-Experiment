@@ -1,17 +1,14 @@
-app.title = 'SPAM';
+app.title = 'SPAM Reaction Time';
 
 var xAxisData = [];
-var data1 = [];
-var data2 = [];
-var data3 = [];
-var data4 = [];
+var data1 = [888,2481,1292,1083,1032,1187,1296,1174,1583,2150,1150,1756];
+var data2 = [1952,1941,863,849,1299,5036,1123,839,1622,2124,1900,1235
+];
+var data3 = [1157,867,861,807,2130,3056,2144,730,1211,1386,2112,829
+];
 
-for (var i = 0; i < 10; i++) {
+for (var i = 1; i < 13; i++) {
     xAxisData.push('Class' + i);
-    data1.push((Math.random() * 2).toFixed(2));
-    data2.push(-Math.random().toFixed(2));
-    data3.push((Math.random() * 5).toFixed(2));
-    data4.push((Math.random() + 0.3).toFixed(2));
 }
 
 var itemStyle = {
@@ -61,29 +58,7 @@ option = {
     grid: {
         left: 100
     },
-    visualMap: {
-        type: 'continuous',
-        dimension: 1,
-        text: ['High', 'Low'],
-        inverse: true,
-        itemHeight: 200,
-        calculable: true,
-        min: -2,
-        max: 6,
-        top: 60,
-        left: 10,
-        inRange: {
-            colorLightness: [0.4, 0.8]
-        },
-        outOfRange: {
-            color: '#bbb'
-        },
-        controller: {
-            inRange: {
-                color: '#2f4554'
-            }
-        }
-    },
+
     series: [
         {
             name: 'Airbus',
@@ -95,14 +70,14 @@ option = {
         {
             name: 'Boeing',
             type: 'bar',
-            stack: 'one',
+            stack: 'two',
             itemStyle: itemStyle,
             data: data2
         },
         {
             name: 'ARJ21',
             type: 'bar',
-            stack: 'two',
+            stack: 'three',
             itemStyle: itemStyle,
             data: data3
         },
@@ -120,18 +95,4 @@ function renderBrushed(params) {
         var rawIndices = brushComponent.selected[sIdx].dataIndex;
         brushed.push('[Series ' + sIdx + '] ' + rawIndices.join(', '));
     }
-
-    myChart.setOption({
-        title: {
-            backgroundColor: '#333',
-            text: 'SELECTED DATA INDICES: \n' + brushed.join('\n'),
-            bottom: 0,
-            right: 0,
-            width: 100,
-            textStyle: {
-                fontSize: 12,
-                color: '#fff'
-            }
-        }
-    });
 }
