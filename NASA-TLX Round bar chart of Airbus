@@ -12,40 +12,40 @@ option = {
     },
     series: [{
         type: 'bar',
-        data: [4, 16, 9, 12],
+        data: [4, 4, 2.25, 3],
         coordinateSystem: 'polar',
         name: '脑力需求',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [5, 15, 7, 13],
+        data: [3, 1.5, 1.875, 3.57],
         coordinateSystem: 'polar',
         name: '身体负担',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [3, 13, 9, 13],
+        data: [3, 2.625, 1.6875, 2.4375],
         coordinateSystem: 'polar',
         name: '时间需求',
         stack: 'a'
     },
     {
         type: 'bar',
-        data: [5, 15, 16, 11],
+        data: [5, 4.6875, 5, 3.4375],
         coordinateSystem: 'polar',
         name: '工作绩效',
         stack: 'a'
     },
     {
         type: 'bar',
-        data: [1, 16, 12, 18],
+        data: [1, 1, 0.75, 1.125],
         coordinateSystem: 'polar',
         name: '努力程度',
         stack: 'a'
     },
         {
         type: 'bar',
-        data: [0, 7, 6, 11],
+        data: [0, 0, 0, 0],
         coordinateSystem: 'polar',
         name: '挫败感',
         stack: 'a'
